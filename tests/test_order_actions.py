@@ -135,6 +135,7 @@ def test_cancel_fulfillment(fulfilled_order):
     assert fulfillment.status == FulfillmentStatus.CANCELED
     assert fulfilled_order.status == OrderStatus.UNFULFILLED
     assert line_1.order_line.quantity_fulfilled == 0
+    assert line_1.order_line.quantity_fulfilled == 1
     assert line_2.order_line.quantity_fulfilled == 0
 
 
